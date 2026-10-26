@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How we checked each listing | mathedworks</title><meta name="description" content="One AI agent drafted each listing from saved sources, a second model checked every sentence twice, and a third audited every listing against the live web. One round of checking wasn&#x27;t enough; here is what each round found.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpolygon points='2,20 11,4.4 29,4.4 38,20 29,35.6 11,35.6' fill='%23f4c531' stroke='%231b2238' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body><svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="s-hex" viewBox="0 0 40 40"><polygon points="2,20 11,4.4 29,4.4 38,20 29,35.6 11,35.6"/></symbol>
+<symbol id="s-trap" viewBox="0 0 40 40"><polygon points="2,28 11,12.4 29,12.4 38,28"/></symbol>
+<symbol id="s-rhomb" viewBox="0 0 40 40"><polygon points="5,29 15,11.7 35,11.7 25,29"/></symbol>
+<symbol id="s-tri" viewBox="0 0 40 40"><polygon points="4,34 36,34 20,6.3"/></symbol>
+<symbol id="s-square" viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="24"/></symbol>
+<symbol id="s-tan" viewBox="0 0 40 40"><polygon points="2,26 22,26 38,16 18,16"/></symbol>
+</svg><a class="skip" href="#main">Skip to content</a>
+<header class="top"><a class="mark" href="index.html">mathedworks</a><nav aria-label="Site"><a href="browse.html">Browse</a><a href="what-nsf-funded.html">What NSF funded</a><a href="how-we-checked.html" aria-current=page>How we checked</a><a href="about.html">About</a></nav></header>
+<main id="main"><h1>How we checked each listing</h1><div class='prose'><p>AI agents on three different Claude models wrote and checked every listing. One agent drafted each listing from saved copies of its sources. A second, on a different model, checked every sentence against those copies and sent the listing back until nothing unsupported remained.</p>
+<p>That first round of checking wasn't enough. When a fresh verifier checked all 55 listings again from scratch, it asked for changes on 43 of them, including three corrections to what NSF funded. A third model audited all 55 against the live web and found an error on 9, none of them in what NSF funded. Every one of those problems was fixed and checked again. One AI verification pass isn't enough to trust a listing, because each independent check caught problems the others missed.</p>
+<h2>How was each listing drafted?</h2>
+<p>The drafting agent (Claude Opus 5.5) wrote only from text it had saved. Before writing, it fetched the product's pages, teacher guides, sample lessons and publisher listings, and saved a dated text copy of each. For every factual point on the card, it recorded the claim, the saved file and a passage copied exactly from that file. A script checks mechanically that each passage really appears in its file.</p>
+<p>The 55 listed products rest on 2,147 cited claims drawn from 563 saved sources.</p>
+<p>The drafter also confirmed each NSF award in NSF's public award database and saved the record. Award titles, dates and dollar amounts on the site are filled from those records by script, never typed by hand.</p>
+<p>The drafting rules were strict:</p>
+<ul>
+<li>No claims that a product works unless a published study is cited.</li>
+<li>When a source doesn't say something, the card says it's unknown ("time per lesson not stated").</li>
+<li>Dead technology, such as Flash or Java, gets flagged.</li>
+<li>The drafter never pays for access.</li>
+</ul>
+<p>Paid products were drafted from publisher descriptions and free samples. Each card says what the drafter actually examined. Of the 55 listings, 1 rests on the full materials, 37 on sample materials and 17 on the publisher's description alone.</p>
+<h2>How did the verifier check each draft?</h2>
+<p>A separate agent (Claude Sonnet 5.5) checked each draft. It saw only the card and the saved sources: no other cards, no drafting notes, no shortlist files. It had a different model and a different prompt from the drafter, to make it less likely to share the drafter's blind spots. Its instructions were to find what is wrong, not to approve.</p>
+<p>For each card the verifier:</p>
+<ol>
+<li>Marked every sentence as supported, partly supported or unsupported, quoting the saved source.</li>
+<li>Checked that each cited passage appears in its source and supports its claim.</li>
+<li>Checked each award against NSF's record, and flagged weak links between award and product.</li>
+<li>Searched the web for the product on its own, without the card's links, to confirm where it can be obtained today.</li>
+<li>Checked the tags, missing caveats a teacher would need, and the drafting rules.</li>
+</ol>
+<p>A card passed only with no unsupported sentences, no rule violations and no required changes.</p>
+<h2>How many rounds did it take?</h2>
+<p>In the first round of checking, most cards needed two or three passes. On the first pass, the verifier sent back 47 of the 52 cards then listed and passed 5. It asked for 201 changes on those first passes. After each revision, the verifier re-checked the changed text.</p>
+<table>
+<thead>
+<tr>
+<th>Rounds until the card passed</th>
+<th>Cards</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>22</td>
+</tr>
+<tr>
+<td>3</td>
+<td>24</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>The verifier wrote 151 reports across all cards and rounds. It failed three drafts outright for having no NSF tie, and those cards were rejected. <a href="what-didnt-make-it.html">What didn't make it</a> gives the reasons.</p>
+<p>A fourth agent (Claude Fable 5.1) later tightened the "Before you use it" lists on 12 cards to at most five teacher-facing items. The verifier re-checked each edit, passing 7 and asking for small fixes on 5.</p>
+<h2>Why did every listing get a second full check?</h2>
+<p>The first round left gaps, and we wanted to know how much a single check misses.</p>
+<p>Not every last fix in the first round went back through the verifier. On 17 cards, the orchestrating agent, which runs on the same model as the drafter, applied a final small fix and confirmed it itself. On one more, the Rational Number Project card, the verifier's last requested change was applied without another verifier pass. So on 18 cards, the last word came from the drafting model, not an independent one.</p>
+<p>A fresh verifier (Claude Sonnet 5.5) then re-checked every listed card from scratch, starting with those 18 and continuing through all 55, including three cards added later from a search of PME-NA conference papers. It ran the full checklist again on each card, without reading the earlier verifier reports.</p>
+<p><strong>It passed 12 of the 55 cards and asked for changes on 43</strong>, 111 changes in all. Every one of those 43 cards had already passed the first round. Most of the problems were small, but they were real:</p>
+<ul>
+<li><strong>Wording that went further than its source.</strong> One card described a curriculum's free Home Links in general terms when the drafter had checked only grade 3. Another said "each section ends with exercises" from an excerpt that covered only some sections. Another called a product "free" when no saved source said so.</li>
+<li><strong>Tags the sources didn't support.</strong> On 12 cards the verifier asked for tag changes, such as a "device per student" requirement no source stated, math topics that didn't match the product's own groupings, and two products tagged as single tasks that are really collections of tasks.</li>
+<li><strong>A purchase rule a teacher would need to know.</strong> On 3 cards, the publisher's page says the books can be bought only on behalf of a school or other educational institution. The first round had missed it.</li>
+<li><strong>Three corrections to what NSF funded.</strong> One card listed a $3.0 million award that rested only on matching investigators and years; its title and abstract didn't match the project the book credits, so the award was removed. One card claimed "Funded this product" when two separate guides drew on different awards, and its relation was lowered to "Funded part of this product." One card's award note said no source tied an award to a study when a saved NSF report did.</li>
+</ul>
+<p>Every fix then went through a delta check, in which the verifier re-checked only the changed text. The verifier wrote 52 delta reports after the second full check. Cards whose fixes didn't pass went back for another round until they did.</p>
+<p>The rule that let the drafting model confirm its own fixes is gone. The script that marks a card verified now refuses any verdict that wasn't written by a different model from the drafter's, or that doesn't record its model at all. Every listing on the site now carries a passing verdict from an independent verifier.</p>
+<h2>What does "NSF funded this" mean on a listing?</h2>
+<p>Each listing states how its NSF awards relate to what a teacher can get today. The agents chose the strongest relation the sources support, and the weaker one when sources didn't settle it.</p>
+<table>
+<thead>
+<tr>
+<th>Relation</th>
+<th>What it means</th>
+<th>Listings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Funded this product</td>
+<td>NSF awards paid to develop the product a teacher can get now.</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Funded part of this product</td>
+<td>NSF paid for some parts, versions or extensions; other funders or earlier work produced the rest. Each card says which part.</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Funded an earlier edition</td>
+<td>NSF funded earlier editions; a publisher funded the one sold today.</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Funded the research it grew from</td>
+<td>NSF funded the research or project the product came out of, not the product itself.</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Connection inferred</td>
+<td>The developers credit NSF without naming awards, or the awards match by title, people and years, but no source ties a specific award to the product.</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>Each card's award note says why it got its relation.</p>
+<h2>What did the independent audit find?</h2>
+<p>A third model (Claude Fable 5.1) audited all 55 listed cards from scratch. It started with 40 of the first 52 cards, chosen at random with a fixed random seed (20261025) so the sample can be reproduced, then did the remaining 12 and the three cards added from the PME-NA search. The auditor never saw the saved sources, the verifier's reports or the cited passages. It read only what a visitor sees on each card and checked every statement against the live web and NSF's live award database. Fable 5.1 had built one of the shortlists and edited caveats on 12 cards, but it hadn't drafted or verified any card. The audit checked the first 52 cards as they stood on Oct 25, before the second full check's fixes.</p>
+<p><strong>9 of the 55 listings had an error.</strong> Each of those 9 cards had exactly one error, for 9 errors among the 2,043 statements the auditor checked, about 0.4%.</p>
+<table>
+<thead>
+<tr>
+<th>Error type</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wrong fact</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Wrong tag</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Missing caveat</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Wrong award, or NSF role overstated</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Dead link</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The auditor found no errors in what NSF funded.</strong> On all 55 cards, every award matched its NSF record, and no card claimed more NSF credit than the auditor could confirm. The second full check did find three NSF problems, described above. The two checks look at different things: the verifier holds each sentence to the exact words of a saved source, while the auditor checks whether a statement is true on the live web.</p>
+<p>Most of the audit errors were statements that something was missing when it was there, or statements that a source had since changed:</p>
+<ul>
+<li>One card said a Teacher Resource Package's price wasn't listed. The publisher's page does list it; the drafter's saved copy had dropped the price block.</li>
+<li>One card said lesson times weren't given. The publisher's "Using the Books" page gives them.</li>
+<li>One card said updated modules promised for 2024 hadn't appeared. They had been posted on Canvas Commons in 2025.</li>
+<li>One card said a project website didn't mention NSF. The home page shows an NSF logo whose alt text names the award number.</li>
+<li>One card said one of four task sets offered only an overview. Sample lessons for that set are posted.</li>
+<li>One card dated a set of sample files to 2006. The files themselves carry dates from 2007 and 2010.</li>
+<li>Two cards tagged a license as "not stated" when the publisher's site states one.</li>
+<li>One card didn't pass on the developer's advice that the tool works best with students in grade 4 and above.</li>
+</ul>
+<p>All 9 were corrected, and the verifier re-checked each correction. All 9 passed.</p>
+<p>The auditor couldn't check 37 statements, mostly because a login, a bot challenge or a page that renders only in a full browser blocked it. Those count as unverified, not as errors.</p>
+<h2>Where do the research links and credits on each listing come from?</h2>
+<p>Most come from public records tied to each listing's NSF awards, matched by a script with fixed rules rather than chosen by an AI agent. Each link connects to an award behind the product, but no one has checked whether a given paper is about the product itself.</p>
+<ul>
+<li><strong>People.</strong> The principal investigator and co-investigators come from each award's NSF record.</li>
+<li><strong>Publications the researchers reported to NSF.</strong> NSF award records list publications the investigators reported. The script looks each one up in Crossref, the scholarly DOI registry, and links it only when the titles match closely (a similarity score of at least 0.92) and the publication years are within one year of each other. Otherwise the paper is listed without a link.</li>
+<li><strong>OpenAlex funding data.</strong> The script also lists papers whose funding information in OpenAlex, an open catalog of research papers, names one of the listing's awards.</li>
+<li><strong>Project pages, mostly for older projects.</strong> NSF records from before about 2000 rarely list publications. For some projects, an agent added papers named on the project's own research or bibliography pages, or archived copies of them, and recorded the page each one came from.</li>
+</ul>
+<p>Each link on a listing shows how it was found. Across the 55 listings there are 445 research links, 239 of them with a working DOI or web address: 321 reported to NSF (130 of those matched to a DOI), 85 from OpenAlex, and 39 named on project pages. The script that builds them is <code>pipeline/fill_research.py</code>.</p>
+<h2>What wrong award numbers did we find in the field's own sources?</h2>
+<p>The agents found four places where a project's own materials, or a catalog record of them, give an NSF award number that is wrong. In each case they used the number NSF's record supports and explained the discrepancy on the card.</p>
+<ul>
+<li><strong>Rational Number Project.</strong> The project site lists its 1995 award as 9408915. In NSF's database, that number is an unrelated economics award. Award 9454371 matches the site's title, investigator and $1,904,888 amount, so the card uses it.</li>
+<li><strong>FAACT fraction curriculum.</strong> An older project page cites award 1708329, which is an unrelated scholarship award in NSF's database. The curriculum site and NSF's records give 1708327, so the card treats 1708329 as a typo.</li>
+<li><strong><em>Children's Mathematics</em> (Cognitively Guided Instruction).</strong> The ERIC record for the 1999 first edition lists contract MDR-8955346. In NSF's database, 8955346 is a Rational Number Project award at the University of Minnesota, so the card doesn't use it.</li>
+<li><strong>Learning Mathematics for Teaching measures.</strong> A 2008 booklet credits grant REC-9979873. In NSF's database, that number is an unrelated chemical engineering award at Purdue. The card leaves it off, and we couldn't identify the intended number.</li>
+</ul>
+<h2>What did people do?</h2>
+<p>Two math educators, Jennifer Kleiman and Cameron Byerly, set the goal and the bar and named the first groups to look at. No person wrote, edited, tagged, checked or approved any listing. Every step on this page was done by AI agents, and every AI step is logged on its card with the model, prompt version and date.</p>
+<p>Logging in to free registrations is the only task reserved for a person, because the agents can't sign up for accounts. Where a registration wall stopped the agents, the listing shows what they could and couldn't examine.</p></div><section class="prose"><h2>The numbers</h2>
+<p>The 55 listings make 2,147 statements, each citing a passage from one of 568 saved sources.
+claude-opus-5-5 drafted every listing; claude-opus-5-5, claude-sonnet-5-5, a different model, checked every sentence against the
+saved copies and every award in NSF's database, and sent listings back until nothing unsupported remained.</p>
+<p>A second full check, from scratch, by the same independent model covered 55 of the 55 listings: 12 passed unchanged and 43 were sent back for changes before going live.</p><p>A third model (claude-fable-5-1) then audited 55 listings chosen at random, from scratch: it used only the live web and NSF's award database, without seeing our saved sources. 9 of 55 listings (16%; the plausible range for the whole index is 9% to 28%) had at least one error. Across the 2,043 statements it checked it found 9 errors, about 0.4%, of which 0 concerned what NSF funded. It could not check 37 statements, mostly behind logins.</p><p>All 9 faulted listings were corrected, and each correction was checked again by a verifier before it went live; every product page says whether it was in the sample and what the auditor found.</p>
+<p>1 listings rest on the full materials, 37 on sample materials and
+17 on the publisher's description alone; each listing says which. Sources were last retrieved on
+Oct 26, 2026.</p></section></main>
+<footer><p>mathedworks is an independent index of teaching materials from research funded by the U.S. National Science
+Foundation. It is not affiliated with NSF. AI agents built it; sources were last checked Oct 26, 2026.</p>
+<p class="links"><a href="browse.html">All products</a><a href="how-we-chose.html">How we chose</a><a href="what-didnt-make-it.html">What didn&#x27;t make it</a><a href="gaps.html">Gaps</a><a href="mailto:mathedworks@gmail.com?subject=mathedworks%3A%20a%20mistake%20on%20the%20site&body=Page%3A%20%0A%0AWhat%20is%20wrong%2C%20and%20where%20you%20checked%3A%0A">Report a mistake</a></p></footer>
+</body></html>

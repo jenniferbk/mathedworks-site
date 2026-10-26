@@ -1,0 +1,48 @@
+[
+ {
+  "id": "codap",
+  "source": "https://codap.concord.org/app/#file=examples:Roller%20Coasters",
+  "date": "2026-10-26",
+  "alt": "CODAP with the Roller Coasters example open: a case table of coasters with columns such as park, top speed and drop, above two graph panes waiting for attributes.",
+  "width": 800,
+  "height": 500,
+  "taken_by": "mathedworks, Playwright (Chromium); cropped to the tool itself and resized to 800x500 webp"
+ },
+ {
+  "id": "phet-math-simulations",
+  "source": "https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_en.html",
+  "date": "2026-10-26",
+  "alt": "PhET's Fractions: Intro simulation on its Intro screen: the fraction 0 over 1 beside an empty circle, a bucket of green pie pieces, and a row of representation buttons.",
+  "width": 800,
+  "height": 500,
+  "taken_by": "mathedworks, Playwright (Chromium); cropped to the tool itself and resized to 800x500 webp",
+  "credit": "Simulation by PhET Interactive Simulations, University of Colorado Boulder, CC BY-NC 4.0."
+ },
+ {
+  "id": "geometric-functions-web-sketchpad",
+  "source": "https://geometricfunctions.org/curriculum/introducing-functions/reflection-family/",
+  "date": "2026-10-26",
+  "alt": "The Reflection Family activity in Web Sketchpad: a tool palette of point, mirror, reflect, segment, animate and polygon beside the title Reflection Challenges and a Start Activity button.",
+  "width": 800,
+  "height": 500,
+  "taken_by": "mathedworks, Playwright (Chromium); cropped to the tool itself and resized to 800x500 webp"
+ },
+ {
+  "id": "learning-trajectories-lt2",
+  "source": "https://www.learningtrajectories.org/math/learning-trajectories",
+  "date": "2026-10-26",
+  "alt": "The Learning Trajectories grid on learningtrajectories.org: cards such as Counting, 2D Shapes, Composing Numbers and Measurement: Length, colour-coded by strand.",
+  "width": 800,
+  "height": 500,
+  "taken_by": "mathedworks, Playwright (Chromium); cropped to the tool itself and resized to 800x500 webp"
+ },
+ {
+  "id": "locus-statistics-assessments",
+  "source": "https://locus.thinkdataed.org/professional-development/questions/by-grade/grade-6?type=prodev_multiple_choice_question",
+  "date": "2026-10-26",
+  "alt": "The LOCUS question browser with grade 6 selected, a Multiple choice tab, difficulty filters and the first of 24 items.",
+  "width": 800,
+  "height": 500,
+  "taken_by": "mathedworks, Playwright (Chromium); cropped to the tool itself and resized to 800x500 webp"
+ }
+]
