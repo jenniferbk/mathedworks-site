@@ -102,7 +102,7 @@ border-radius:999px;padding:.3rem .9rem;font:500 .95rem/1.3 inherit;text-decorat
 .glance dt{color:var(--soft);font-weight:500}.glance dd{margin:0;overflow-wrap:anywhere}
 .rel{font-weight:500}
 .by{color:var(--soft);font-size:.92rem;margin:0 0 .5rem}
-.meta{display:block;color:var(--soft);font-size:.92rem}
+.meta{display:block;color:var(--soft);font-size:.92rem}.design{display:block;margin:.2rem 0;font-size:.95rem}
 .people,.papers{padding-left:1.2rem}.people li,.papers li{margin:.35rem 0}.all summary{cursor:pointer;font-weight:500}.all{margin:.5rem 0 1rem}
 .tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.93rem}th,td{text-align:left;padding:.4rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-weight:700}.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
